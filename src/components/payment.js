@@ -32,7 +32,8 @@ class Payment extends Component {
     await this.calculateGrandTotal();
     const data = {
       name: `trx${Date.now()}`,
-      totalPrice: this.state.grandTotal
+      totalPrice: this.state.grandTotal,
+      items: this.props.cartItems
     }
     this.props.addHistory(data);
     toast.configure();
